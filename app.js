@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 
 const userRoute = require('./router/account/users.js');
-app.use('/user', userRoute)
+app.use('/users', userRoute)
 
 const authRoute = require('./router/account/auth.js');
 app.use('/auth', authRoute)

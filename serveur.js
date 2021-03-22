@@ -1,7 +1,7 @@
 require('dotenv').config();
-const app = require('./app');
+const http = require('./app');
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
+http.listen(PORT, () => {
     console.log(`listening on port ${PORT}`)
 })

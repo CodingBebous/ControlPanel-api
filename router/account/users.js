@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../../models').User;
+const Messages = require('../../models').Message;
 
 router.get('/', async (req, res) => {
-    const users = await User.findAll()
+    const users = await User.findAll({
+        include: [Messages]
+    })
 
     res.send(users)
 })
